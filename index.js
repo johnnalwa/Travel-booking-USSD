@@ -7,14 +7,14 @@ const app = express();
 const PORT = 8000;
 
 const credentials = {
-  apiKey: "1a3801285659a6ab005b20aac78351afa6246cd6ba96b680ef26056340914096", // Replace with your API key
-  username: "dynos", // Replace with your username
+  apiKey: "369d021bf918dfb2f9c3db5cbd5fdca519a01e67fda4b1357a3a1fbf40fc8365", // Replace with your API key
+  username: "johness", // Replace with your username
 };
 
 // Initialize AfricasTalking here
-AfricasTalking(credentials);
+const africastalking = new AfricasTalking(credentials);
+const sms = africastalking.SMS;
 
-const sms = AfricasTalking.SMS;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
